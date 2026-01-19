@@ -1,0 +1,39 @@
+#Exercise Level 1
+#1 Check python version
+import sys
+print(sys.version)
+
+#2 Open the python interactive shell and do the following operations. The operands are 3 and 4.
+print(2 + 3)             # addition(+)
+print(3 - 1)             # subtraction(-)
+print(2 * 3)             # multiplication(*)
+print(3 / 2)             # division(/)
+print(3 ** 2)            # exponential(**)
+print(3 % 2)             # modulus(%)
+print(3 // 2)            # Floor division operator(//)
+
+#3 strings
+name= "Samuel"
+print(name)
+
+family_name= 'Inu-Akuetiemhe'
+print(family_name)
+
+Country= 'Nigeria'
+print(Country)
+
+String= 'I am enjoying 30 days of python'
+print(String)
+
+
+#4 Data Type
+print(type(10))
+print(type(9.8))
+print(type(3.14))
+print(type(4-4j))
+print((['Samuel','Python','Nigeria']))
+print(type(name))
+print(type(family_name))
+print((Country))
+#Exercise Level 2
+
