@@ -1,0 +1,241 @@
+#Exercise level 1
+#2 Write a python comment saying 'Day 2: 30 Days of python programming'
+#Day 2: 30 Days of python programming
+
+#3
+first_name= 'Samuel'
+print(first_name)
+
+#4
+last_name= 'Inu-Akuetiemhe'
+print(last_name)
+
+#5
+full_name= first_name + ' ' +last_name
+print(full_name)
+
+#6
+country= 'Nigeria'
+print(country)
+
+#7
+city='Benin'
+print(city)
+
+#8
+age= 28
+print(age)
+
+#9
+year= 1997
+print(year)
+
+#10
+is_married= False
+print(is_married)
+
+#11
+is_true= True
+print(is_true)
+
+#12
+is_light= False
+print(is_light)
+
+#13
+job,is_social,hobby,next_age= 'Media',True, 'Soccer', 29
+print(job,is_social,hobby,next_age)
+
+
+# Exercise level 2
+#1 data type
+print(type(first_name))
+print(type(last_name))
+print(type(full_name))
+print(type(country))
+print(type(city))
+print(type(age))
+print(type(year))
+print(type(is_married))
+print(type(is_true))
+
+#2 length
+print(len(first_name))
+
+#3 compare length of last name and first name
+len_first= len(first_name)
+len_last= len(last_name)
+
+if len_first > len_last:
+    print('length of first name is greater than lenth of last name ')
+elif len_first < len_last:
+    print('Length of first name is lesser than length of last name')
+else:
+    print('Equal length')
+
+#4 Declaring Vriables
+num_one= 5
+num_two= 4
+
+#5 Add num_one and num_two and assign the value to a variable total
+total= num_one + num_two
+print(total)
+
+#6 Subtract num_two from num_one and assign the value to a variable diff
+diff= num_one - num_two
+print(diff)
+
+#7 Multiply num_two and num_one and assign the value to a variable product
+multiple= num_one * num_two
+print(multiple)
+
+#8 Divide num_one by num_two and assign the value to a variable division
+division= num_one / num_two
+print(division)
+
+#9 Divide num_one by num_two and assign the value to a variable division
+remainder= num_two % num_one
+print(remainder)
+
+#10 Divide num_one by num_two and assign the value to a variable division
+exp= num_one**num_two
+print(exp)
+
+#11 Find floor division of num_one by num_two and assign the value to a variable floor_division
+floor_division= num_one//num_two
+print(floor_division)
+
+#12 radius of a circle r=30 area = pir**2 circum
+radius=30
+import math
+area= (math.pi) * (radius**2)
+print(area)
+
+circum_of_circle= 2 * math.pi * radius
+print(circum_of_circle)
+
+#iii. Take radius as user input and calculate the area.
+prompt= 'Enter desired radius:'
+radius= float(input(prompt))
+area= (math.pi) * (radius**2) 
+print('Area of your circle:', area)
+
+#13 Use the built-in input function to get first name, last name, country and age from a user and store the value to their corresponding variable names
+
+first_name= input('Enter first name:')
+last_name= input('Enter last name:')
+country= input('Enter Country:')
+age= float(input('Enter age:'))
+print('First name:',first_name)
+print('Last name:',last_name)
+print('Country:', country)
+print('Age:', age)
+
+help('keyword')
+
+
+
+# 10 Practice Exercises 
+
+#1.Swap variables without a third variable.Create two variables, a and b, and swap their values without using a third variable.
+a=10
+b=20
+print('a:',b, 'b:', a)
+
+
+#2. String and number combination: Ask the user for their age and name, then print a sentence like: Hello Alice, in 5 years you will be 30 years old.
+name= (input('Enter name:'))
+age= int(input('Enter Age:'))
+print('Hello',name, 'in 5 years you will be ',age + 5,'years old')
+
+#3.Multiple variable assignment Create three variables in one line (x, y, z) and assign values 10, 20, 30.Then print their sum using only one print() call
+x,y,z= 10, 20, 30
+print('sum:',x+y+z)
+
+#4. Temperature converter: Write a script that converts a temperature in Celsius to Fahrenheit and Kelvin. Celsius → Fahrenheit: F = C * 9/5 + 32 Celsius → Kelvin: K = C + 273.15
+
+print('Welcome To Spencerz Celsius Calculator')
+Celsius= float(input('Enter Celsius Value:'))
+Fahrenheit= Celsius *(9/5) + 32
+Kelvin = Celsius + 273.15
+action= input('Fahrenheit or Kelvin: ')
+if action == 'Fahrenheit':
+    print(Fahrenheit, 'F')
+elif action == 'fahrenheit':
+    print(Fahrenheit,'F')
+if action == 'kelvin':
+    print(Kelvin,'K')
+elif action == 'Kelvin':
+    print(Kelvin,'K')
+
+
+#5.  Type inspection using only numbers and strings. Create a variable, using only: integer, float, string. Then, using built-in functions only: print the value of each variable, print the data type of each variable
+
+age= 25
+
+height= 180.5
+
+name= 'Jeff'
+
+print(age)
+print(height)
+print(name)
+
+print(type(age))
+print(type(height))
+print(type(name))
+
+#6. String length comparison: Ask the user to enter two words, Print the longer word and its length. If equal, print “Both words have the same length.”
+
+word_1= str(input("Enter first word:"))
+len_1= len(word_1)
+
+word_2= str(input("Enter second word:"))
+len_2= len(word_2)
+
+if len_1 > len_2:
+    print('Longer word is:', word_1,'Word length is:',len_1)
+elif len_1 < len_2:
+    print('Longer word is:', word_2,'Word length is:', len_2)
+elif len_1 == len_2:
+    print('Both words have the same length.', len_1,':', len_2)
+else:
+    print('Error')
+
+#7. Casting challenge: Create a variable x as a string representing a number (e.g., "100.5"). Convert it to an integer and a float separately. Print both results and explain what happens to the number.
+
+x= '100'
+integer= int(x)  
+print(integer)  # '100' is a string buy by use 'int', it converts it to an integer by removing the quote 
+
+float= float(x)
+print(float)  # '100' is a string buy by use 'float', it converts it to a float by removing the quote and changing it to decimal
+
+#.8 Arithmetic with mixed types. Create two variables: num1 = "10" (string), num2 = 3 (integer). Add them correctly without changing the original types permanently.
+
+num1= '50'
+num2= 10
+sum= int(num1) + num2
+print('Answer is:', sum) # both variables still maintain their original types
+
+#9. Write a Python program that: Asks the user to enter a number, Converts the input to an integer, Uses if / else to check: if the number is even → print "Even" otherwise → print "Odd"
+
+prompt= input('Welcome, Enter Number:')
+conversion= int(prompt)
+if conversion % 2 == 0:
+    print('Even number')
+else:
+    print('Odd number')
+
+
+
+#10. Formatted output practice: Ask the user for their name, age, and country.Print a single formatted string like: My name is Alice, I am 25 years old, and I live in Nigeria.
+
+name= input('Enter Name:')
+
+age= input('Enter Age:')
+
+country= input('Enter Country:')
+
+print(f'My name is {name}, I am {age} years old, and i live in {country}.')
+
