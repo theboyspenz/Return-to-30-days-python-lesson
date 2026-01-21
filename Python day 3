@@ -1,0 +1,254 @@
+#Exercises - Day 3
+#1. Declare your age as integer variable
+age= int(40)
+print(age)
+
+#2 Declare your height as a float variable
+
+height= float(180)
+print(height,'cm')
+
+#3 Declare a variable that store a complex number
+
+comp_num= str(1 + 4j)
+print(comp_num)
+
+#4. Write a script that prompts the user to enter base and height of the triangle and calculate an area of this triangle (area = 0.5 x b x h).
+
+base= int(input('Enter Base:'))
+height= int(input('Enter Height:'))
+area= 0.5 * base * height
+print(f'The area of your triangle is {area}.')
+
+#5 Write a script that prompts the user to enter side a, side b, and side c of the triangle. Calculate the perimeter of the triangle (perimeter = a + b + c).
+a= int(input('Enter side a :'))
+b= int(input('Enter side b :'))
+c= int(input('Enter side c :'))
+perimeter= a + b + c
+print(f'The perimeter of your triangle is {perimeter}')
+
+#6Get length and width of a rectangle using prompt. Calculate its area (area = length x width) and perimeter (perimeter = 2 x (length + width))
+length= int(input('Enter Length of rectangle:'))
+width= int(input('Enter Width of rectangle:'))
+area= length * width
+peri= 2 * (length * width)
+
+print(f'Perimeter of Rectangle is:{peri}')
+print(f'Area of Rectangle is: {area}')
+
+#7. Get radius of a circle using prompt. Calculate the area (area = pi x r x r) and circumference (c = 2 x pi x r) where pi = 3.14.
+
+radius= int(input('Enter Radius of circle:'))
+area= 3.14 * (radius**2)
+circum= 2 * 3.14 * radius
+print(f'Area of circle is: {area}')
+print(f'Circumference of circle is: {circum}')
+
+#8. Calculate the slope, x-intercept and y-intercept of y = 2x -2
+#y= mx+ c
+#to solve for y-intercept
+m=2 #slope
+c= -2 #intercept(the value of y when x=0)
+
+print('slope:', m)
+print('y-intercept(0,',c,')')
+
+#x-intercept -c/m the value of x when y=0
+x_int= int(-c / m)
+print('x-intercept(',x_int,',0)')
+
+#9 Slope is (m = y2-y1/x2-x1). Find the slope and Euclidean distance between point (2, 2) and point (6,10)#
+
+x1, y1= 2,2
+x2, y2= 6, 10
+m2= int((y2-y1)/(x2-x1))
+print('slope is:', m2)
+
+#10 compare the slopes in 8 and 9
+
+print('slope is:', m2)
+
+print(m>m2)
+print(m<m2)
+print(m==m2)
+print(not m > m2)
+
+#11 Calculate the value of y (y = x^2 + 6x + 9). Try to use different x values and figure out at what x value y is going to be 0.
+
+#12. Find the length of 'python' and 'dragon' and make a falsy comparison statement.
+
+word_1= len('python')
+word_2= len('dragon')
+comp= word_2 > word_1
+print(f'dragon has more letters than python:{comp}')
+
+#13. Use and operator to check if 'on' is found in both 'python' and 'dragon'
+word_1= 'python'
+word_2= 'dragon'
+if 'on'  in word_1 and word_2:
+    print(True)
+else:
+    print(False)
+
+#14. I hope this course is not full of jargon. Use in operator to check if jargon is in the sentence.
+
+sentence='I hope this course is not full of jargon'
+if 'jargon' in sentence:
+    print(True)
+else:
+    print(False)
+
+#15. There is no 'on' in both dragon and python
+print('on' not in 'dragon'and'python')
+
+#16. Find the length of the text python and convert the value to float and convert it to string
+
+text= 'python'
+lenght=(len(text))
+print(lenght)
+print(float(lenght))
+print(str(lenght))
+
+
+#17. Even numbers are divisible by 2 and the remainder is zero. How do you check if a number is even or not using python?
+
+prompt= int(input('Enter number:'))
+if prompt % 2==0:
+    print('Even number')
+else:
+    print('Odd number')
+
+#18. Check if the floor division of 7 by 3 is equal to the int converted value of 2.7.
+
+num1= 7
+num2= 3
+con_value=int(2.7)
+div=int( 7 // 3)
+if div == con_value:
+    print(True)
+else:
+    print(False)
+
+#19. Check if type of '10' is equal to type of 10
+num1= '10'
+num2= 10
+print(type(num1)== type(num2))
+
+#21 .Write a script that prompts the user to enter hours and rate per hour. Calculate pay of the person?
+
+hours= int(input('Enter hours worked:'))
+rate= int(input('Enter Hourly Rate:'))
+earnings= hours * rate
+print(f'Your earning for the week is:$',earnings)
+
+#22 .Write a script that prompts the user to enter number of years. Calculate the number of seconds a person can live. Assume a person can live hundred years
+
+years= int(input('Enter years lived:'))
+seconds= 60
+minutes= 60
+hour= 24
+days= 365
+seconds_lived= seconds*minutes*hour*days* years
+print(f'You have lived for: {seconds_lived}seconds')
+
+
+#Extra practice exercise to futher understand day 3
+#1. Ask the user for two numbers and print whether they are equal.
+
+num1= int(input('Enter first number:'))
+num2= int(input('Enter second number:'))
+if num1==num2:
+    print(True)
+else:
+    print(False)
+
+
+#2 Check if a number entered by the user is greater than 10.
+if num1 > 10 or num2 > 10:
+    print(True)
+else:
+    print(False)
+
+#3 Ask the user for their age and print True if they are at least 18, otherwise False.
+age=int(input('Enter age:'))
+if age >= 18:
+    print(True)
+else:
+    print(False)
+
+#4. Ask the user for a number and print True if it is even and greater than 0, otherwise False.
+
+number= int(input('Enter number:'))
+if number % 2 ==0 and number > 0:
+    print(True)
+else:
+    print(False)
+
+#5. Ask the user for three numbers and check if the first number is greater than the sum of the other two.
+
+num1= int(input('Enter first number:'))
+num2= int(input('Enter second number:'))
+num3= int(input('Enter third number:'))
+if num1 > (num2 + num3):
+    print(True)
+else: 
+    print(False)
+
+#6. Ask the user for a number and print True if it is divisible by 2 or 3, otherwise False.
+
+num= int(input('Enter number:'))
+
+if num % 2 == 0 or num % 3 == 0:
+    print(True)
+else:
+    print(False)
+
+
+#7.Ask the user for a number and print True if it is positive, even, and less than 50.
+
+num= int(input('Enter number:'))
+
+if num > 0 and num % 2 == 0 and num < 50:
+    print(True)
+else:
+    print(False)
+
+#8. Ask the user for two numbers and print True if the first is a multiple of the second but not equal.
+
+num1= int(input("Enter first number:"))
+num2= int(input("Enter second number:"))
+
+if num1 % num2 ==0 and num1 != num2:
+    print(True)
+else:
+    print(False)
+
+
+#9.Ask the user for two ages and print True if at least one of them is a teenager (between 13 and 19 inclusive).
+age1= int(input('Enter first age:'))
+age2= int(input('Enter second age:'))
+age1_is_teen= age1>=13 and age1<= 19
+age2_is_teen= age2>= 13 and age2<=19
+if age1_is_teen or age2_is_teen:
+    print(True)
+else:
+    print(False)
+
+#10 Ask the user for three numbers and print True if all are different and positive.
+
+num1=int(input('Enter first number:'))
+
+num2=int(input('Enter second number:'))
+
+num3=int(input('Enter third number:'))
+
+diff= (num1 != num2) and (num2 != num3) and (num1 != num3)
+pos= (num1 >0) and (num2 >0) and (num3 >0)
+
+if diff and pos:
+    print (True)
+else:
+    print(False)
+
+
+
