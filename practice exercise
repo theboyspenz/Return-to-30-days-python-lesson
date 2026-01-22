@@ -1,0 +1,150 @@
+#Practical Exercises (Days 1–4)
+#1. Shopping Discount: Ask the user for the price of an item and their membership status (“yes” or “no”). If they are a member, apply a 10% discount.Otherwise, apply 5%. Print the final price.
+
+print('Welcome to Spencerz.Ng Payment System')
+item_price= int(input('Enter price of item purchased:'))
+status= input('Are you a member of the Spencerz Club?. Enter Yes or No:')
+member_discount= 0.10 * item_price
+non_member= 0.05 * item_price
+final_price_members= item_price - member_discount
+final_price_non_members= item_price - non_member
+
+
+if status == 'Yes' or status == 'yes':
+    print(f'Congratulation. You have a discount of: {member_discount} Naira')
+elif status == 'No' or status=='no':
+    print(f'Congratulations. You have a discount of: {non_member} Naira')
+else:
+    print('Error')
+    
+proceed= (input('Enter Yes to proceed with payment.\nEnter No to Cancel Payment:'))
+
+if (status == 'Yes' or status == 'yes') and (proceed == 'Yes' or proceed == 'yes'):
+    print(f'Yor total payment is {final_price_members}Naira. Kindly pay at the counter\n Thanks For shopping with us. Hope to see you again.')
+elif (status == 'No' or status=='no') and  (proceed == 'yes' or proceed == 'Yes'):
+    print(f'Yor total payment is {final_price_non_members}Naira. Kindly pay at the counter\n Thanks For shopping with us. Hope to see you again.')
+elif (status == 'No' or status=='no') or (status== 'yes' or status== 'Yes') and  (proceed == 'No' or proceed == 'no'):
+    print('Thank you. If you encountered any problem, Kindly speak with our Front Desk Representative')
+
+
+
+ #2.Name Formatter: Ask the user to enter their full name in lowercase. Print it with first letters capitalized. Print it in all uppercase and all lowercase.
+
+full_name= input('Enter full name:')
+
+print(full_name.title())
+print(full_name.upper())
+print(full_name.lower())
+
+#3.Simple Login Check
+#Ask the user to enter a username and password.
+#Check if the username is "admin" and the password is "1234".
+#Print "Access granted" or "Access denied".
+
+print('Login Menu')
+username= input('Enter Username:')
+password= input('Enter Paassword:')
+
+if username == 'admin' and password == '1234':
+    print('Access granted')
+else:
+    print('Access Denied')
+
+#4.Even-Odd Counter. Ask the user to enter a number. Check if it’s even or odd.
+# Print "Even" or "Odd".
+#Also print "Positive" or "Negative" if applicable.
+
+num= int(input('Enter number:'))
+
+if num % 2 == 0:
+    print('Even number')
+else:
+    print('Odd number')
+
+if num <  0:
+    print('Negative')
+else:
+    print('Positive')
+
+#5. Email Validator. Ask the user to input their email. Check if it contains "@" and ".com". Print "Valid email"
+
+email= input('Enter Email:')
+
+if '@' and '.com' in email:
+    print('Valid Email')
+else:
+    print('Invalid Email')
+
+
+#6. Username Acronym. Ask the user to enter their full name (e.g., "Samuel Inu-Akuetiemhe"). Create an acronym from their name (first letters of each word).Print the acronym in uppercase.
+
+username= input('Enter First, Middle and last name:')
+
+split = username.split()      #['samuel', 'inu', 'akuetiemhe']
+
+first_letters= split[0][0]
+secon_letter= split[1][0]
+third_letter= split[2][0]
+acronym= first_letters + secon_letter + third_letter
+print(acronym.upper())
+
+#7.Sentence Analyzer: Ask the user to enter a sentence.Count how many times the word "Python" appears. Print the length of the sentence, number of words, and whether it starts with a capital letter.
+
+
+sen= input('Enter sentence:')
+print(sen.count('python'))
+
+print(len(sen))
+
+print(len(sen.split()))
+
+if sen[0].isupper:
+    print('Is capital letter')
+else:
+    print('is lower case')
+
+#8.Bank Transaction Validator: Ask the user to enter a withdrawal amount and account balance. If the withdrawal is less than or equal to the balance, print "Transaction successful". Otherwise, print "Insufficient funds". If the withdrawal is negative, print "Invalid amount".
+
+with_amount= int(input('Enter desired withdrawal amount:'))
+bal= int(input('Enter Bank Balance:'))
+if with_amount >= bal:
+    print('Insufficient funds')
+elif with_amount <= bal:
+    print('Trnsaction Successful')
+if with_amount < 0:
+    print('Invalid Amount')
+
+# 9. String Puzzle: Given the string "Coding For All", ask the user to:Slice out the word "Coding", Replace "All" with "Everyone" Print the final modified string, check if the string contains "Python" and print the result.
+
+str= 'Coding for all'
+splitting= str.split()
+print(len(splitting))
+
+new_string= splitting[1] + ' ' + splitting[2]
+print(new_string)
+
+modified_string= new_string.replace('all', 'Everyone')
+print(modified_string)
+
+if 'Python' in modified_string:
+    print(True)
+else:
+    print(False)
+
+#10. Simple Quiz Scorer: Ask the user 3 questions:Score 1 point for each correct answer. Print the total score and percentage.
+
+score= 0
+Question_1= input("What is 2 + 2?:")
+if Question_1 == '4':
+    score += 1
+
+Question_2= input("What is the capital of France?:")
+if (Question_2 == 'Paris' or'paris'):
+    score += 1
+
+Question_3= input("Is Python case-sensitive? (yes/no):")
+if (Question_3 == 'Yes' or'yes'):
+    score += 1
+
+
+print(f'Your score is {score}, you have {(score /3) * 100 }percent')
