@@ -1,0 +1,128 @@
+#Python Practice – 10 Questions (Day 12)
+#Strings
+#1 Ask the user to enter a sentence. Print:
+
+sentence=input('Enter sentence:')
+words= sentence.split()
+print(len(words))
+
+unique_words= set(words)
+print(len(unique_words))
+
+#2 Ask the user to input their full name (first, middle, last). Print the initials in uppercase.
+
+full_name= input("enter full name:")
+
+names= full_name.split()
+first_name= names[0]
+middle_name= names[1]
+third_name= names[2]
+
+first_letters= first_name[0] + middle_name[0] + third_name[0]
+initials= first_letters.upper()
+print(initials)
+
+
+#3 Given the string "Data Science is Fun", replace all occurrences of "i" with "I" and print the new string.
+
+string= "Data Science is Fun"
+new_string= string.replace('i','I')
+print(new_string)
+
+#4 Numbers & Operators: Ask the user to input three numbers. Print:
+#The largest, smallest, and average
+
+num1= int(input('Enter first number:'))
+num2= int(input('Enter second number:'))
+num3= int(input('Enter third number:'))
+
+maxi= max(num1,num2,num3)
+print(maxi)
+
+mini= min(num1,num2,num3)
+print(mini)
+
+average= (num1+num2+num3) / 3
+print(average)
+
+#Compare the absolute difference between min–average and max–average, and print which one is closer to the average.
+
+diff_min= abs(mini-average)
+diff_max= abs(maxi-average)
+print(f'difference of minimum from average is: {diff_min}')
+print(f'difference of maximum from average is: {diff_max}')
+
+if diff_max > diff_min:
+    print(diff_max)
+else:
+    print(diff_min)
+
+
+#Ask the user for two points (x1, y1) and (x2, y2). Write a function that calculates the slope of the line passing through them and returns it.
+
+def slope_calculation(x1,y1,x2,y2):
+    slope= (y2-y1)/(x2-x1)
+    return slope
+print(slope_calculation(1,2,3,4))
+
+#Conditionals
+#Ask the user to input their age. Print:"Child" if under 13 "Teenager" if 13–19 "Adult" if 20–59 "Senior" if 60+ If the input is invalid (negative or zero), print "Invalid age"
+
+age=int(input('Enter age:'))
+
+if age <13 and age  >=1:
+    if age <=0:
+        print('Invalid age')
+    elif age != int:
+        print('Invalid age')
+    print('Child')
+elif age <=19 and age >=13:
+    print('Teenager')
+elif age <=59 and age >=20:
+    print('Adult')
+else:
+    print('senior')
+
+# Write a for loop to print the following pattern:
+
+for i in range(6):
+    for j in range(1, i+1):
+        print(j,end='')
+    print()
+
+
+# Use a while loop to calculate the sum of all even numbers between 1 and 100.
+
+total=0
+num= 1
+while num <= 100:
+    if num % 2==0:
+        total += num
+    num += 1
+
+print(total)
+        
+# Lists, Sets & Functions
+#Ask the user to enter 5 fruits one by one. Store them in a list. Then:
+
+fruit=[]
+frui1=input('Enter first fruit:')
+frui2=input('Enter second fruit:')
+frui3=input('Enter third fruit:')
+frui4=input('Enter fourth fruit:')
+frui5=input('Enter fifth fruit:')
+
+fruit.append(frui1)
+fruit.append(frui2)
+fruit.append(frui3)
+fruit.append(frui4)
+fruit.append(frui5)
+
+def caap_list(list):
+    uppcased=[]
+    for item in list:
+        uppcased.append(item.upper())
+    return uppcased
+print(caap_list(fruit))
+
+print (fruit)

@@ -1,0 +1,134 @@
+#Exercises: Day 11
+#1 Declare a function add_two_numbers. It takes two parameters and it returns a sum.
+
+def add_two_numbers(a,b):
+    total= a+b
+    return total
+print(add_two_numbers(3,4))
+
+#2 Area of a circle is calculated as follows: area = π x r x r. Write a function that calculates area_of_circle.
+
+def area_of_circle(r):
+    PI= 3.14
+    area= PI * r**2
+    return area
+print(area_of_circle(10))
+
+#3 Write a function called add_all_nums which takes arbitrary number of arguments and sums all the arguments. Check if all the list items are number types. If not do give a reasonable feedback.
+
+def add_all_nums(*nums):
+    total= 0
+    for num in nums:
+        if type(num) != int and type(num) != float:
+            return 'Error: input must be number type'
+        total += num
+    return total
+print(add_all_nums(1,1,1))
+
+
+#4 Temperature in °C can be converted to °F using this formula: °F = (°C x 9/5) + 32. Write a function which converts °C to °F, convert_celsius_to-fahrenheit.
+
+def temp_conversion(c,):
+    formula= (c *(9/5)) +32
+    return formula
+print(f'{temp_conversion(30)}°F')
+
+#5 yWrite a function called check-season, it takes a month parameter and returns the season: Autumn, Winter, Spring or Summer
+
+def check_season(month):
+    Autumn= ('September','October','November')
+    Winter= ('December','January','February')
+    Spring= ('March','April', 'May')
+    Summer= ('June', 'July','August')
+    if month in Autumn:
+        return 'Autumn'
+    if month in Winter:
+        return 'Winter'
+    if month in Spring:
+        return 'Spring'
+    if month in Summer:
+        return 'Summer'
+print(check_season('January'))
+
+#6 Write a function called calculate_slope which return the slope of a linear equation
+
+def calculate_slope(x1,y1,x2,y2):
+    slope=(y2-y1)/(x2-x1)
+    return slope
+print(calculate_slope(1,2,3,4))
+
+
+#8 Declare a function named print_list. It takes a list as a parameter and it prints out each element of the list.
+
+def print_list(list):
+    for i in list:
+        print(i)
+print_list([2,3,4,5,6])
+    
+
+#9 Declare a function named reverse_list. It takes an array as a parameter and it returns the reverse of the array (use loops).
+
+def reverse_list(*array):
+    return array[::-1]
+print(reverse_list([1,2,3,4,5,6]))
+
+
+#11 Declare a function named add_item. It takes a list and an item parameters. It returns a list with the item added at the end.
+
+def add_items(lst,item):
+    lst.append(item)
+    return lst
+print(add_items(['Potato', 'Tomato', 'Mango', 'Milk'], 'Yam'))
+
+#12 Declare a function named remove_item. It takes a list and an item parameters. It returns a list with the item removed from it.
+def remove_item(lst,item):
+    lst.remove(item)
+    return lst
+print(remove_item(['Potato', 'Tomato', 'Mango', 'Milk'], 'Mango'))
+
+
+#13 Declare a function named sum_of_numbers. It takes a number parameter and it adds all the numbers in that range.
+
+def sum_of_numbers(n):
+    total= 0
+    for i in range(n+1):
+        total= total + i
+    return total
+print(sum_of_numbers(5))
+
+#14 Declare a function named sum_of_odds. It takes a number parameter and it adds all the odd numbers in that range.
+def sum_of_odds(n):
+    total= 0
+    for i in range (n+1):
+        if (i % 2)== 1:
+            total += i
+    return total
+print(sum_of_odds(5))
+        
+
+#15 Declare a function named sum_of_even. It takes a number parameter and it adds all the even numbers in that - range.
+def sum_of_even(n):
+    total= 0
+    for i in range (n+1):
+        if (i % 2)== 0:
+            total += i
+    return total
+print(sum_of_even(5))
+        
+
+
+
+ #16 Declare a function named evens_and_odds . It takes a positive integer as parameter and it counts number of evens and odds in the number.
+
+def even_and_odds(n):
+    if n <=0:
+        return 'Enter positive number:'
+    odd= 0
+    even=0
+    for i in range(1,n+1):
+        if i%2==1:
+            odd += 1
+        else:
+            even += 1
+    return odd, even
+print(even_and_odds(100))
